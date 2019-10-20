@@ -26,6 +26,15 @@ class LinkedList:
 
         print ("--------------------")
 
+    def displayGoodStudents(self):
+        printval = self.head
+        while printval is not None:
+            if printval.data2 > 3.4:
+                print (printval.data1)
+                printval = printval.next_node
+            else:
+                printval = printval.next_node
+
 
 def main():
 
@@ -33,10 +42,15 @@ def main():
 
     Students.insert("A", 4)
     Students.insert("B", 3)
-    Students.insert("C", 3.5)
-    Students.insert("D", 3.8)
+    Students.insert("C", 3.3)
+    Students.insert("D", 3.6)
+    Students.insert("E", 3.67)
+    Students.insert("F", 3.89)
+    Students.insert("G", 3.45)
 
-    Students.display()
+    # Students.display()
+
+    Students.displayGoodStudents()
 
 main()
 
